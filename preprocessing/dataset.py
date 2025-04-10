@@ -10,7 +10,7 @@ class DataLabel:
          return f"DataLabel(data_shape = {self.data.shape}, label = {self.label})"
 
 
-class Batch:  # This class will store multiple images
+class Batch: 
     def __init__(self, data_list, label_list):
         self.data_list = np.array(data_list)
         self.label_list = np.array(label_list)
