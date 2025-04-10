@@ -1,0 +1,7 @@
+import numpy as np
+from PIL import Image
+
+def img2matr(file_path: str, img_size=(64, 64)):
+    img = Image.open(file_path).convert("RGB").resize(img_size)
+    arr = np.asarray(img, dtype=np.float32) / 255.0
+    return np.transpose(arr, (2, 0, 1))
